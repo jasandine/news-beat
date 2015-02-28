@@ -1,13 +1,4 @@
-<div ng-show="beat.reporters.length">
-  <h2>Reporter List for {{ beat.name }}</h2>
-  <ul>
-    <li ng-repeat="item in beat.reporters">
-      {{ item.name }}
-      {{ item.birthday }}
-      {{ item.experience }}
-    </li>
-  </ul>
-</div>
+
 
 <div>
   <h2>Add a reporter to {{ beat.name }}</h2>
@@ -20,3 +11,17 @@
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
+
+<div ng-show="beat.reporters.length">
+  <h2>Reporter List for {{ beat.name }}</h2>
+  <dl>
+    <dt ng-repeat-start="item in beat.reporters">
+      <a ng-click="showDetails = ! showDetails">{{ item.name }}</a>
+    </dt>
+    <dd ng-show="showDetails">Experience: {{ item.experience }}</dd>
+    <dd ng-repeat-end ng-show="showDetails">Birthday: {{ item.birthday }}</dd>
+  </dl>
+</div>
+{{ item.name }}
+{{ item.birthday }}
+{{ item.experience }}
