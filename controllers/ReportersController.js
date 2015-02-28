@@ -4,11 +4,11 @@ newsBeat.controller('ReportersCtrl', function ReportersCtrl($scope, $stateParams
 
   $scope.addReporter = function() {
     $scope.beat.reporters.push({ name: $scope.reporterName,
-                                 birthday: $scope.reporterBirthday,
-                                 experience: $scope.reporterExperience,
-                                 profile: [] });
-    $scope.reporterName = null;
-    $scope.reporterBirthday = null;
-    $scope.reporterExperience = null;
-  };
-});
+      birthday: $scope.reporterBirthday,
+      experience: $scope.reporterExperience,
+      profile: [] });
+      $scope.reporterName = null;
+      $scope.reporterBirthday = null;
+      $scope.reporterExperience = null;
+    };
+  });

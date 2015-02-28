@@ -1,5 +1,3 @@
-
-
 <div>
   <h2>Add a reporter to {{ beat.name }}</h2>
   <form ng-submit="addReporter()" class="form-inline" role="form">
@@ -13,15 +11,12 @@
 </div>
 
 <div ng-show="beat.reporters.length">
-  <h2>Reporter List for {{ beat.name }}</h2>
+  <h3>Reporter List for {{ beat.name }}</h3>
   <dl>
     <dt ng-repeat-start="item in beat.reporters">
       <a ng-click="showDetails = ! showDetails">{{ item.name }}</a>
     </dt>
-    <dd ng-show="showDetails">Experience: {{ item.experience }}</dd>
-    <dd ng-repeat-end ng-show="showDetails">Birthday: {{ item.birthday }}</dd>
+    <dd ng-show="showDetails"><h4>Experience: {{ item.experience }}</h4></dd>
+    <dd ng-repeat-end ng-show="showDetails"><h4>Birthday: {{ item.birthday }}</h4></dd>
   </dl>
 </div>
-{{ item.name }}
-{{ item.birthday }}
-{{ item.experience }}
